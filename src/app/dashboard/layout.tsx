@@ -15,7 +15,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
 
         {/* SidebarInset 用于在侧边栏展开时自动为内容区域添加左侧内边距，避免内容被遮挡 */}
         <SidebarInset>
-          <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 backdrop-blur border-border/40 sticky top-0 z-10 border-b px-6 py-3 shadow-sm">
+          <header className="bg-background/95 supports-backdrop-filter:bg-background/60 backdrop-blur border-border/40 sticky top-0 z-10 border-b px-6 py-3 shadow-sm">
             <div className="flex shrink-0 grow items-center gap-3">
               {/* 触发侧边栏展开/收起的按钮 */}
               <SidebarTrigger className="hover:bg-muted transition-colors -ml-1 h-8 w-8" />
@@ -30,7 +30,7 @@ export default function DashboardLayout({ children }: { children: React.ReactNod
               </Breadcrumb>
             </div>
           </header>
-          <main>
+          <main className="from-background to-muted/20 flex-1 overflow-auto bg-linear-to-br p-6">
             {children}
           </main>
         </SidebarInset>
