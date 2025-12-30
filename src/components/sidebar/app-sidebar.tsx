@@ -12,10 +12,14 @@ import {
 } from "~/components/ui/sidebar"
 import Credits from "./credits"
 import Upgrade from "./upgrade"
+import MobileSidebarClose from "./mobile-sidebar-close"
+import SidebarMenuItems from "./sidebar-menu-items"
 export default function AppSidebar() {
   return (
     <Sidebar className="from-background to-muted/20 border-r-0 bg-linear-to-b">
       <SidebarContent className="px-3">
+        {/* 移动端关闭按钮 */}
+        <MobileSidebarClose />
         <SidebarGroup>
           <SidebarGroupLabel className="text-primary mt-6 mb-8 flex flex-col items-start justify-start px-2">
             <Link href="/" className="mb-1 flex items-center gap-2">
@@ -27,7 +31,7 @@ export default function AppSidebar() {
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu className="space-y-1">
-              {/* <SidebarMenuItems /> */}
+              <SidebarMenuItems />
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
@@ -43,6 +47,7 @@ export default function AppSidebar() {
           variant="outline"
           className="border-muted-foreground/20 hover:border-primary/50 w-full transition-colors"
           disableDefaultLinks={true}
+          size="default"
           additionalLinks={[
             {
               label: "个人信息",
