@@ -18,7 +18,7 @@ export default function SidebarMenuItems() {
     },
     {
       label: "图片生成",
-      href: "/dashboard/generate",
+      href: "/dashboard/create",
       icon: Wand2,
       active: false
     },

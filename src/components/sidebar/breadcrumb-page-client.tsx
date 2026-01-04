@@ -8,6 +8,12 @@ export default function BreadcrumbPageClient() {
     switch (path) {
       case "/dashboard":
         return "首页"
+      case "/dashboard/create":
+        return "图片生成"
+      case "/dashboard/projects":
+        return "图片管理"
+      case "/dashboard/settings":
+        return "用户设置"
       default:
         return "Unknown"
     }
